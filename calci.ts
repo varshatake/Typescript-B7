@@ -7,6 +7,8 @@ class Calci {
     constructor(){
         this.data1 = prompt(`Please Enter your first number :`);
         this.data2 = prompt(`Please Enter your second number`);
+        parseInt(this.data1);
+        parseInt(this.data2);
     }
     
     displayCal() {
