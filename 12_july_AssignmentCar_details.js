@@ -16,9 +16,6 @@ var ToyotaCar = /** @class */ (function () {
     ToyotaCar.prototype.FuelType = function () {
         return 'Disel';
     };
-    ToyotaCar.prototype.GPS = function () {
-        return false;
-    };
     return ToyotaCar;
 }());
 var HyundaiCar = /** @class */ (function () {
@@ -39,8 +36,8 @@ var HyundaiCar = /** @class */ (function () {
     HyundaiCar.prototype.FuelType = function () {
         return 'Petrol & CNG';
     };
-    HyundaiCar.prototype.GPS = function () {
-        return true;
+    HyundaiCar.prototype.Gps = function () {
+        return 'Supported';
     };
     return HyundaiCar;
 }());
@@ -51,7 +48,6 @@ console.log("seates Available :", toyotaObj.getTotalSeats());
 console.log("Call support :", toyotaObj.callFacility());
 console.log("Car color :", toyotaObj.color());
 console.log("Fuel Type :", toyotaObj.FuelType());
-console.log("GPS :", toyotaObj.GPS());
 /////////////////////////////////////////////////
 console.log("*********************************");
 console.log("---- Hyundai Car Details ----");
@@ -61,4 +57,4 @@ console.log("Seates Available : ", hyundaiObj.getTotalSeats());
 console.log("Car Color :", hyundaiObj.color());
 console.log("Call support :", hyundaiObj.callFacility());
 console.log("Fuel Type :", hyundaiObj.FuelType());
-console.log("GPS :", hyundaiObj.GPS());
+console.log("GPS :", hyundaiObj.Gps());

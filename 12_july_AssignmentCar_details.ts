@@ -4,7 +4,10 @@ interface Icar {
     color():string;
     callFacility():string;
     FuelType():string;
-    GPS(): boolean;
+}
+
+interface Igps {
+    Gps() : string;
 }
 
 class ToyotaCar implements Icar{
@@ -23,13 +26,10 @@ class ToyotaCar implements Icar{
     FuelType(): string {
         return 'Disel';
     }
-    GPS(): boolean {
-        return false;
-    }
     
 }
 
-class HyundaiCar implements Icar {
+class HyundaiCar implements Icar,Igps {
     price(): number {
         return 900000;
     }
@@ -45,8 +45,8 @@ class HyundaiCar implements Icar {
     FuelType(): string {
         return 'Petrol & CNG';
     }
-    GPS(): boolean {
-        return true;
+    Gps(): string {
+        return 'Supported';
     }
 }
 
@@ -57,7 +57,6 @@ console.log(`seates Available :`,toyotaObj.getTotalSeats());
 console.log(`Call support :`,toyotaObj.callFacility());
 console.log(`Car color :`,toyotaObj.color());
 console.log(`Fuel Type :`,toyotaObj.FuelType());
-console.log(`GPS :`,toyotaObj.GPS());
 
 /////////////////////////////////////////////////
 console.log(`*********************************`);
@@ -68,5 +67,5 @@ console.log(`Seates Available : `,hyundaiObj.getTotalSeats());
 console.log(`Car Color :`,hyundaiObj.color());
 console.log(`Call support :`,hyundaiObj.callFacility());
 console.log(`Fuel Type :`,hyundaiObj.FuelType());
-console.log(`GPS :`,hyundaiObj.GPS());
+console.log(`GPS :`,hyundaiObj.Gps());
 
